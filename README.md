@@ -2,6 +2,8 @@
 
 Compras is a powerful fullstack ecommerce platform built using modern technologies such as GraphQL, Strapi, Stripe for payment processing, JavaScript, and Tailwind CSS. It provides a robust and customizable solution for launching and managing online stores. This repository contains all the necessary code and configurations to set up and run Compras on your local machine or deploy it to a live server.
 
+![Compras Logo](./compras-logo.png)
+
 ## Features
 
 - **GraphQL**: Compras leverages GraphQL, a powerful query language for APIs, to provide flexible and efficient data fetching capabilities.
@@ -94,12 +96,12 @@ This project is licensed under the [MIT License](LICENSE).
 
 Compras was developed with the help of various open-source libraries and resources. We would like to thank the following projects:
 
-- [GraphQL](https://graphql.org/)
-- [Strapi](https://strapi.io/)
-- [Stripe](https://stripe.com/)
-- [JavaScript
+- ![GraphQL Logo](./graphql-logo.png) [GraphQL](https://graphql.org/)
+- ![Str
 
-](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Tailwind CSS](https://tailwindcss.com/)
+api Logo](./strapi-logo.png) [Strapi](https://strapi.io/)
+- ![Stripe Logo](./stripe-logo.png) [Stripe](https://stripe.com/)
+- ![JavaScript Logo](./javascript-logo.png) [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- ![Tailwind CSS Logo](./tailwind-css-logo.png) [Tailwind CSS](https://tailwindcss.com/)
 
-We appreciate the efforts of the entire open-source community for making these technologies available.
+I appreciate the efforts of the entire open-source community for making these technologies available.
