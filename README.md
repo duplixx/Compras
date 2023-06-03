@@ -1,3 +1,5 @@
+![Compras Logo](./assets/compras.png)
+
 # Compras - Fullstack Ecommerce Platform
 
 Compras is a powerful fullstack ecommerce platform built using modern technologies such as GraphQL, Strapi, Stripe for payment processing, JavaScript, and Tailwind CSS. It provides a robust and customizable solution for launching and managing online stores. This repository contains all the necessary code and configurations to set up and run Compras on your local machine or deploy it to a live server.
@@ -101,3 +103,8 @@ Compras was developed with the help of various open-source libraries and resourc
 - [Tailwind CSS](https://tailwindcss.com/)
 
 We appreciate the efforts of the entire open-source community for making these technologies available.
+
+
+
+
+
