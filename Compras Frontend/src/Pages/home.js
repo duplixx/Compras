@@ -15,8 +15,8 @@ export default function Home() {
   }
 
   return (
-    <div>
-    <div className='flex overflow-x'>
+    <div className="p-4">
+    <div className='grid grid-cols-3 gap-2'>
       {data.products.data.map(({ id, attributes }) => (
         <Card
             className="m-6"

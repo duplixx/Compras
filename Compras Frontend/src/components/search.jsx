@@ -45,7 +45,8 @@ const Search = () => {
                 {
                     data &&
                     data.products.data.map(({ id, attributes }) => {
-                        return <Link key={id} to={`/product/${id}`}><span style={{ padding: "20px" }} className=" text-red-500">{attributes.name}</span></Link>
+                        
+                        return <Link key={id} className="text-red-500 bg-slate-300" to={`/product/${id}`}><span style={{ padding: "20px" }} className=" text-red-500">{attributes.Name}</span></Link>
                     })
                 }
             </div>

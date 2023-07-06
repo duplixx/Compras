@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Card({id,Name,price,description,img}) {
   return (
     <Link to={`/product/${id}`}>
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-96 h-54 bg-base-100 shadow-xl">
         <figure><img src={`${BACKEND_URL+img}`} alt="Shoes"/></figure>
         <div className="card-body">
         <h2 className="card-title  truncate">{Name}</h2>

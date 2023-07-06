@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { Country, State, City }  from 'country-state-city';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useCart } from 'react-use-cart';
@@ -27,9 +28,9 @@ const CheckoutForm = () => {
   const initialValues = {
     name: '',
     city: '',
-    state: '',
+    state: 'Uttar Pradesh',
     shippingAddress: '',
-    amount: '',
+    amount: cartTotal,
     items: '',
     pin: '',
   };
@@ -84,7 +85,8 @@ const CheckoutForm = () => {
   };
 
   return (
-      <div className="container mx-auto">
+      <div className="container mx-auto text-lg font-semibold mb-2">
+        <h1 className='text-2xl font-black p-3 '>Checkout Form</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -105,7 +107,9 @@ const CheckoutForm = () => {
 
             <div className="flex flex-col">
               <label htmlFor="state">State</label>
-              <Field type="text" id="state" name="state" className="input input-bordered" />
+              <Field as="select" id="state" name="state"  className="input input-bordered">
+                <option value={State.getAllStates("IN")}/>
+              </Field>
               <ErrorMessage name="state" component="div" className="text-red-500" />
             </div>
 
@@ -122,13 +126,13 @@ const CheckoutForm = () => {
 
             <div className="flex flex-col">
               <label htmlFor="amount">Amount</label>
-              <Field type="number" id="amount" name="amount" className="input input-bordered" />
+              <Field type="number" id="amount" name="amount" className="input input-bordered text-green-600 text-xl " />
               <ErrorMessage name="amount" component="div" className="text-red-500" />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="items">Items</label>
-              <Field type="text" id="items" name="items" className="input input-bordered" />
+              <Field type="text" id="items" name="items" value={items.length} className="input input-bordered text-justify" />
               <ErrorMessage name="items" component="div" className="text-red-500" />
             </div>
 
@@ -139,7 +143,7 @@ const CheckoutForm = () => {
             </div>
 
             <div className="flex flex-col">
-            <CardElement onChange={(e)=>{
+            <CardElement className="input input-bordered" onChange={(e)=>{
               if(e.complete){
                 setPayButton(false)
               }else{
@@ -154,7 +158,7 @@ const CheckoutForm = () => {
               <button
                 type="submit"
                 disabled={(!stripe || !elements) || payButton}
-                className="btn btn-primary"
+                className="btn btn-primary px-6 text-xl shadow-lg shadow-green-400"
               >
                 Pay
               </button>
